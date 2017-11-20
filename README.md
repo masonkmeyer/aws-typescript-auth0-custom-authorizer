@@ -16,7 +16,7 @@ functions:
           method: get
           cors: true
           path: hello
-          authorizer:  arn:aws:lambda:us-east-1:539572642504:function:aws-custom-authorizer-auth0-dev-auth
+          authorizer: arn-to-your-authorizer-lambda
           identitySource: method.request.header.Authorization 
 ```
 
