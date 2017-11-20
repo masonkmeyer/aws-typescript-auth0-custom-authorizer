@@ -1,0 +1,17 @@
+service:
+  name: aws-custom-authorizer-auth0-typescript
+plugins:
+  - serverless-webpack
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  environment:
+    TOKEN_ISSUER: ${file(./secrets.json):TOKEN_ISSUER}
+    JWKS_URI: ${file(./secrets.json):JWKS_URI}
+    AUDIENCE: ${file(./secrets.json):AUDIENCE}
+functions:
+  auth:
+    handler: handler.authorize
+    cors: true
+    integration: lambda

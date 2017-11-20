@@ -1,0 +1,23 @@
+{
+  "name": "aws-typescript-auth0-custom-authorizer",
+  "version": "1.0.0",
+  "description": "Serverless AWS custom authorizer for Auth0 using typescript",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/es6-promise": "0.0.33",
+    "@types/node": "^8.0.53",
+    "serverless-webpack": "^3.0.0",
+    "ts-loader": "^2.3.7",
+    "typescript": "^2.5.2",
+    "webpack": "^3.6.0"
+  },
+  "author": "Mason Meyer",
+  "license": "MIT",
+  "dependencies": {
+    "jsonwebtoken": "^8.1.0",
+    "jwks-rsa": "^1.2.1"
+  }
+}
